@@ -21,8 +21,8 @@ jobs:
         path: hello.txt
 
   download:
+    needs: build
     runs-on: ubuntu-latest
-
     steps:
     - name: Download text file artifact
       uses: actions/download-artifact@v3
